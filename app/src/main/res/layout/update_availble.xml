@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/disconnected">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:orientation="vertical"
+            android:alpha="1"
+            android:id="@+id/subbackground">
+        </LinearLayout>
+
+        <LinearLayout
+            app:layout_widthPercent="80%"
+            app:layout_heightPercent="70%"
+            android:orientation="vertical"
+            android:padding="10sp"
+            app:layout_marginLeftPercent="10%"
+            app:layout_marginTopPercent="15%"
+            android:background="@color/colorPrimary"
+            android:id="@+id/contentnya">
+
+            <android.support.percent.PercentRelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:src="@drawable/android_logo"
+
+                    app:layout_heightPercent="30%"
+                    android:id="@+id/confirm_pict"
+                    android:layout_width="match_parent"/>
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_below="@id/confirm_pict"
+                    app:layout_heightPercent="25%"
+                    app:layout_widthPercent="100%"
+                    android:textColor="#fff"
+                    android:ellipsize="none"
+                    android:textAlignment="center"
+                    android:text="Dengan Update Applikasi ini, anda akan mendapat fitur lebih. Mau?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:autoSizeMinTextSize="20sp"
+                    app:autoSizeStepGranularity="0.5sp"
+                    app:autoSizeTextType="uniform"
+                    android:id="@+id/confirm_subheader"
+                    />
+                <ImageButton
+                    android:background="#00ffffff"
+                    app:layout_widthPercent="30%"
+                    app:layout_heightPercent="20%"
+                    android:src="@drawable/unstatisfied"
+                    android:layout_below="@id/confirm_subheader"
+                    android:id="@+id/confirm_image_no"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_below="@id/confirm_image_no"
+                    app:layout_heightPercent="20%"
+                    app:layout_widthPercent="30%"
+                    android:textColor="#fff"
+                    android:ellipsize="none"
+                    android:textAlignment="center"
+                    android:text="Tidak"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:autoSizeMinTextSize="20sp"
+                    app:autoSizeStepGranularity="0.5sp"
+                    app:autoSizeTextType="uniform"
+                    android:id="@+id/confirm_title_no"
+                    />
+
+                <ImageButton
+
+                    android:background="#00ffffff"
+                    app:layout_widthPercent="30%"
+                    app:layout_heightPercent="20%"
+                    android:src="@drawable/emoticon"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/confirm_subheader"
+                    android:id="@+id/confirm_image_yes"/>
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/confirm_image_no"
+                    app:layout_heightPercent="20%"
+                    app:layout_widthPercent="30%"
+                    android:textColor="#fff"
+                    android:ellipsize="none"
+                    android:textAlignment="center"
+                    android:text="Ya"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:autoSizeMinTextSize="20sp"
+                    app:autoSizeStepGranularity="0.5sp"
+                    app:autoSizeTextType="uniform"
+                    android:id="@+id/confirm_title_yes"
+                    />
+            </android.support.percent.PercentRelativeLayout>
+        </LinearLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

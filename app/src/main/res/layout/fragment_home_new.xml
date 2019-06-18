@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_content">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                    <LinearLayout
+                            android:id="@+id/lbl_info_rekening"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:paddingLeft="10dp"
+                                android:layout_gravity="center"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_user_icons8"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="60sp"
+                                android:gravity="left|center"
+                                android:text="@string/text_profile"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                            android:paddingLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_alignParentRight="true">
+                            <ImageView
+                                android:layout_gravity="right|center"
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_logo_mecash"/>
+                            <TextView
+                                android:id="@+id/lbl_saldo_emoney"
+                                android:layout_width="match_parent"
+                                android:layout_height="60sp"
+                                android:layout_marginRight="5dp"
+                                android:gravity="left|center"
+                                android:text="@string/text_saldo"
+                                android:maxLength="10"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_slideshow_berita"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gridLayout">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="fill_parent"
+                        android:layout_height="130dp"
+                        android:layout_alignParentTop="true" />
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="left"
+                        android:padding="10dip"
+                        app:centered="true"
+                        app:fillColor="#df0623"
+                        app:pageColor="#fff"
+                        app:snap="false" />
+                </RelativeLayout>
+
+                <android.support.v7.widget.GridLayout
+                    android:id="@+id/layout_main_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_slideshow_berita"
+                    android:layout_marginTop="5dp"
+                    app:columnCount="4"
+                    app:rowCount="1">
+
+                    <LinearLayout
+                        android:id="@+id/btn_info_saldo"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                                android:layout_width="62dp"
+                                android:layout_height="62dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/ic_me_new_infosaldo"
+                                android:padding="10dp"
+                                android:scaleType="fitCenter"
+                                android:id="@+id/info_saldo"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35sp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="@string/text_info_saldo"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textSize="@dimen/home_text_12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_daftar_mutasi"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/ic_me_new_daftarmutasi"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35sp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="@string/text_mutasi_saldo"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textSize="@dimen/home_text_12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_transfer"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/ic_me_new_transfer"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35sp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="@string/text_transfer"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textSize="@dimen/home_text_12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                            android:id="@+id/btn_pay_release"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="vertical"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1">
+
+                        <ImageView
+                                android:layout_width="52dp"
+                                android:layout_height="52dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/ic_release_logo"
+                                android:padding="10dp"
+                                android:scaleType="fitCenter" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="35sp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="@string/text_release"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textSize="@dimen/home_text_14dp"
+                                android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_info_prodak"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/ic_me_new_infoprodak"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35sp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="@string/text_info_prodak"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textSize="@dimen/home_text_12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </android.support.v7.widget.GridLayout>
+
+
+
+
+                <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/recycler"-->
+                    <!--android:layout_below="@+id/layout_payment"-->
+                    <!--android:scrollbars="horizontal"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_centerHorizontal="true" />-->
+                <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/recycler"-->
+                    <!--android:visibility="visible"-->
+                    <!--android:background="@color/putih"-->
+                    <!--android:layout_below="@+id/layout_payment"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:layout_marginTop="5dp"/>-->
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.constraint.ConstraintLayout>

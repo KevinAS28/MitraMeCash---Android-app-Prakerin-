@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#FFF"
+            android:paddingBottom="16dp">
+
+        <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:padding="15dp"
+                app:srcCompat="@drawable/logotanpasub"/>
+
+        <View
+                android:id="@+id/garis1"
+                android:layout_below="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@color/lightgray"/>
+
+        <TextView
+                android:id="@+id/txt_pesan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garis1"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:textSize="18sp"/>
+        <TextView
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_pesan"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="kevin"
+                android:textColor="#000"
+                android:textSize="18sp"/>
+        <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_email"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/btn_gradient"
+                android:text="Ok"
+                android:textColor="@color/cardview_light_background"/>
+    </RelativeLayout>
+</LinearLayout>

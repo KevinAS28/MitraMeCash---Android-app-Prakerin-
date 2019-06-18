@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_info_rek"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:title="@string/nav_info_rek" />
+        <item
+            android:id="@+id/nav_topup"
+            android:icon="@drawable/ic_input_black_24dp"
+            android:title="@string/nav_topup" />
+        <item
+            android:id="@+id/nav_release"
+            android:icon="@drawable/ic_settings_backup_restore_black_24dp"
+            android:title="@string/nav_release" />
+        <!--<item-->
+            <!--android:id="@+id/nav_pembayaran"-->
+            <!--android:icon="@drawable/ic_receipt_black_24dp"-->
+            <!--android:title="@string/nav_pembayaran" />-->
+        <item
+            android:id="@+id/nav_pembelian"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="@string/nav_pembelian" />
+        <!--<item-->
+            <!--android:id="@+id/nav_qr_pay"-->
+            <!--android:icon="@drawable/ic_crop_free_black_24dp"-->
+            <!--android:title="@string/nav_qr_pay" />-->
+        <item
+            android:id="@+id/nav_list_trn"
+            android:icon="@drawable/ic_playlist_add_check_black_24dp"
+            android:title="@string/nav_list_trn" />
+        <item
+            android:id="@+id/nav_msg"
+            android:icon="@drawable/ic_message_black_24dp"
+            android:title="@string/nav_msg" />
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_email"
+                android:title="@string/nav_email" />
+            <item
+                android:id="@+id/nav_about"
+                android:title="@string/nav_about" />
+        </menu>
+    </item>
+
+</menu>

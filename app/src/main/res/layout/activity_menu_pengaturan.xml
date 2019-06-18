@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BaseActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/new_mitrasoft"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+
+
+        android:orientation="vertical">
+        <RelativeLayout
+                android:layout_marginTop="10sp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="110sp"
+                android:layout_marginHorizontal="10sp"
+                android:background="@drawable/settings_account_profile"
+
+        >
+
+            <ImageButton
+                    android:id="@+id/settings_profile_picture"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:src="@drawable/ic_user_icons8"
+                    android:background="#00000000"
+                    android:scaleType="centerCrop"
+
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Nama Orang"
+                      android:textSize="20sp"
+                      android:layout_toRightOf="@id/settings_profile_picture"
+                      android:layout_marginTop="10sp"
+                      android:id="@+id/settings_nama"
+                      
+            />
+
+            <!--static text-->
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Merchant: "
+                      android:textSize="@dimen/home_text_14dp"
+                      android:layout_toRightOf="@id/settings_profile_picture"
+                      android:layout_marginTop="5sp"
+                      android:id="@+id/settings_merchant_banner"
+                      android:layout_below="@id/settings_nama"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Kode Merchant: "
+                      android:textSize="@dimen/home_text_14dp"
+                      android:layout_toRightOf="@id/settings_profile_picture"
+                      android:layout_marginTop="5sp"
+                      android:id="@+id/settings_kdmerchant_banner"
+                      android:layout_below="@id/settings_merchant_banner"
+            />
+
+            <!--dynamic text-->
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Kode Merchant"
+                      android:textSize="@dimen/home_text_14dp"
+                      android:layout_toRightOf="@id/settings_kdmerchant_banner"
+                      android:layout_marginTop="5sp"
+                      android:id="@+id/settings_kdmerchant"
+                      android:layout_below="@id/settings_merchant_banner"
+                      android:layout_marginLeft="1sp"
+
+                      
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Nama Merchant"
+                      android:textSize="@dimen/home_text_14dp"
+                      android:layout_toRightOf="@id/settings_merchant_banner"
+                      android:layout_marginTop="5sp"
+                      android:id="@+id/settings_namamerchant"
+                      android:layout_below="@id/settings_nama"
+                      android:layout_marginLeft="1sp"
+            />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/text_keamanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/text_keamanan_akun"
+            android:textSize="@dimen/home_text_16dp"
+            android:textStyle="bold"
+            app:layout_columnSpan="4"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <RelativeLayout
+            android:id="@+id/btn_ganti_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_akun"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="1dp">
+
+            <TextView
+                android:id="@+id/txt_ganti_pass"
+                android:gravity="left|center"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/text_ganti_pass"
+                android:textStyle="normal"
+                android:maxLines="1"
+                android:textSize="@dimen/home_text_15dp" />
+
+            <TextView
+                android:gravity="right|center"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/todo"
+                android:drawableStart="@drawable/ic_next"
+                android:drawableLeft="@drawable/ic_next"
+                android:padding="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/txt_ganti_pass"
+                android:background="@color/lightgray" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_ganti_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_akun"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="1dp">
+
+            <TextView
+                android:id="@+id/txt_ganti_pin"
+                android:gravity="left|center"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/text_ganti_pin"
+                android:textStyle="normal"
+                android:maxLines="1"
+                android:textSize="@dimen/home_text_15dp" />
+
+            <TextView
+                android:gravity="right|center"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/todo"
+                android:drawableStart="@drawable/ic_next"
+                android:drawableLeft="@drawable/ic_next"
+                android:padding="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/txt_ganti_pin"
+                android:background="@color/lightgray" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

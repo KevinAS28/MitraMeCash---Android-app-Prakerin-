@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#aaa</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="lightgray">#ededed</color>
+    <color name="transparent_blue">#322100c8</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="deeppurple">#7c4dff</color>
+    <color name="green">#00bfa5</color>
+    <color name="yello">#ffb300</color>
+    <color name="putihToolbar">#fafafa</color>
+    <color name="putih">#ffffff</color>
+    <color name="hitam">#000000</color>
+    <color name="link">#00d0ff</color>
+    <color name="mitrasoft">#5D79BB</color>
+    <color name="new_mitrasoft">#678DFF</color>
+</resources>

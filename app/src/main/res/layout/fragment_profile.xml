@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/header_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="1dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:id="@+id/profile_account">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_user_icons8"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                android:orientation="vertical">
+
+                            <TextView
+                                    android:id="@+id/lbl_info_account"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="left|center"
+                                    android:text="@string/text_account"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textSize="@dimen/home_text_16dp"
+                                    android:textStyle="bold"/>
+
+                            <TextView
+                                    android:id="@+id/lbl_info_rekening"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="left"
+                                    android:text="@string/text_profile"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textSize="@dimen/home_text_14dp"
+                                    android:textStyle="normal"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/header_saldo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header_nama"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="1dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:layout_columnSpan="2"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/text_name_emoney"
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/home_text_16dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitCenter"
+                                android:src="@mipmap/ic_logo_mecash" />
+
+                            <TextView
+                                android:id="@+id/lbl_saldo_emoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30sp"
+                                android:gravity="top|left"
+                                android:text="@string/text_saldo"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textColor="@color/hitam"
+                                android:textSize="@dimen/home_text_14dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.GridLayout
+                    android:id="@+id/grid_transaksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header_saldo"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginEnd="10dp"
+                    app:columnCount="3"
+                    app:rowCount="3">
+
+                    <TextView
+                        android:id="@+id/text_header_transaksi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/header_saldo"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/text_transaksi"
+                        android:textSize="@dimen/home_text_16dp"
+                        android:textStyle="bold"
+                        app:layout_columnSpan="1"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1" />
+
+                    <TextView
+                        android:id="@+id/text_history_transaksi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/header_saldo"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/text_riwayat_trn"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/home_text_16dp"
+                        android:textAlignment="textEnd"
+                        android:gravity="end"
+                        app:layout_columnSpan="2"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_transfer"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/ic_me_new_payment"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35sp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="@string/text_transfer"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textSize="@dimen/home_text_12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_topup"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/ic_me_new_payment"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35sp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="@string/text_topup"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textSize="@dimen/home_text_12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_release"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/ic_me_new_payment"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35sp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="@string/text_release"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textSize="@dimen/home_text_12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </android.support.v7.widget.GridLayout>
+
+                <View
+                    android:id="@+id/garis1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/grid_transaksi"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/text_lainnya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/garis1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/text_more"
+                    android:textSize="@dimen/home_text_16dp"
+                    android:textStyle="bold"
+                    app:layout_columnSpan="4"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_lainnya"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txt_pengaturan"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_pengaturan"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/home_text_15dp" />
+
+                    <TextView
+                        android:id="@+id/txt_pengaturan_ket"
+                        android:layout_below="@+id/txt_pengaturan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_pengaturan_ket"
+                        android:textSize="@dimen/home_text_13dp" />
+
+                    <TextView
+                        android:gravity="right|center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/todo"
+                        android:drawableStart="@drawable/ic_next"
+                        android:drawableLeft="@drawable/ic_next"
+                        android:padding="10dp" />
+
+                    <View
+                        android:id="@+id/garis2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_pengaturan_ket"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/btn_ulasan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_setting"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txt_ulasan"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_ulasan"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/home_text_15dp" />
+
+                    <TextView
+                        android:id="@+id/txt_ulasan_ket"
+                        android:layout_below="@+id/txt_ulasan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_ulasan_ket"
+                        android:textSize="@dimen/home_text_13dp" />
+
+                    <TextView
+                        android:gravity="right|center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/todo"
+                        android:drawableStart="@drawable/ic_next"
+                        android:drawableLeft="@drawable/ic_next"
+                        android:padding="10dp" />
+
+                    <View
+                        android:id="@+id/garis3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_ulasan_ket"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_ulasan"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_about"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_about"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/home_text_15dp" />
+
+                    <TextView
+                        android:id="@+id/txt_about_ket"
+                        android:layout_below="@+id/txt_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_about_ket"
+                        android:textSize="@dimen/home_text_13dp" />
+
+                    <TextView
+                        android:gravity="right|center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/todo"
+                        android:drawableStart="@drawable/ic_next"
+                        android:drawableLeft="@drawable/ic_next"
+                        android:padding="10dp" />
+
+                    <View
+                        android:id="@+id/garis4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_about_ket"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_about"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_logout"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_logout"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/home_text_15dp" />
+
+                    <TextView
+                        android:id="@+id/txt_logout_ket"
+                        android:layout_below="@+id/txt_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_logout_ket"
+                        android:textSize="@dimen/home_text_13dp" />
+
+                    <TextView
+                        android:gravity="right|center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/todo"
+                        android:drawableStart="@drawable/ic_next"
+                        android:drawableLeft="@drawable/ic_next"
+                        android:padding="10dp" />
+
+                    <View
+                        android:id="@+id/garis5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_logout_ket"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+
+>
+    <android.support.percent.PercentRelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/disconnected">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#99000000"
+                android:orientation="vertical"
+                android:alpha="1"
+                android:id="@+id/subbackground">
+        </LinearLayout>
+
+        <LinearLayout
+                app:layout_widthPercent="70%"
+                app:layout_heightPercent="70%"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                app:layout_marginPercent="15%"
+                android:orientation="vertical"
+                android:padding="10sp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/contentnya">
+
+            <android.support.percent.PercentRelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+            >
+
+                <ImageView
+                        android:src="@drawable/offline_disconnected"
+                        app:layout_heightPercent="35%"
+                        android:id="@+id/error_pict"
+                        android:layout_below="@id/error_header"
+                        android:layout_width="match_parent"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                        app:layout_heightPercent="15%"
+                        app:layout_widthPercent="100%"
+                        android:textColor="#fff"
+                        android:ellipsize="none"
+                        android:textAlignment="center"
+                        android:text="Tidak ada internet"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:autoSizeMinTextSize="20sp"
+                        app:autoSizeStepGranularity="0.5sp"
+                        app:autoSizeTextType="uniform"
+                        android:id="@+id/error_header"
+                />
+
+                <android.support.v7.widget.AppCompatTextView
+                        android:layout_below="@id/error_pict"
+                        app:layout_heightPercent="35%"
+                        app:layout_widthPercent="100%"
+                        android:textColor="#fff"
+                        android:ellipsize="none"
+                        android:textAlignment="center"
+                        android:text="Pastikan data seluler atau wifi hidup. dan jangan lupa kuotanya :v"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:autoSizeMinTextSize="20sp"
+                        app:autoSizeStepGranularity="0.5sp"
+                        app:autoSizeTextType="uniform"
+                        android:id="@+id/error_subheader"
+                />
+                <android.support.v7.widget.AppCompatButton
+                        app:layout_marginLeftPercent="10%"
+                        app:layout_marginRightPercent="10%"
+                        app:layout_heightPercent="10%"
+                        app:layout_widthPercent="80%"
+                        android:textColor="@color/colorPrimary"
+                        android:ellipsize="none"
+                        android:background="@drawable/tombol1"
+                        android:layout_alignParentBottom="true"
+                        android:textAlignment="center"
+                        android:text="Coba Lagi"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:autoSizeMinTextSize="10sp"
+                        app:autoSizeStepGranularity="0.5sp"
+                        app:autoSizeTextType="uniform"
+                        android:id="@+id/try_again"
+
+                />
+            </android.support.percent.PercentRelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

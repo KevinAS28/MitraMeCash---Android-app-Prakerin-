@@ -1,0 +1,247 @@
+<resources>
+    <string name="app_name">IBA M-Banking</string>
+    <string name="registrasi">Registrasi</string>
+    <string name="aktivasi">Aktivasi</string>
+    <string name="createPin">Buat PIN Baru</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_name">Adriansya</string>
+    <string name="nav_header_email">adriansya@gmail.com</string>
+    <string name="nav_header_saldo">Saldo Me-Cash</string>
+    <string name="nav_header_saldo_value">Rp. 500.000</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_info_rek">Info Rekening</string>
+    <string name="nav_topup">Top Up</string>
+    <string name="nav_release">Release Me-Cash</string>
+    <string name="nav_pembayaran">Pembayaran</string>
+    <string name="nav_pembelian">Pembelian</string>
+    <string name="nav_qr_pay">QR Pay</string>
+    <string name="nav_list_trn">List Transaksi</string>
+    <string name="nav_msg">Kotak Masuk</string>
+
+    <string name="nav_aktivasi">Aktivasi</string>
+    <string name="nav_email">Email</string>
+    <string name="nav_about">Tentang Aplikasi</string>
+
+    <string name="frag_info_rek">Info Rekening</string>
+    <string name="frag_transfer">Top Up</string>
+    <string name="frag_pembayaran">Pembayaran</string>
+    <string name="frag_pembelian">Pembelian</string>
+    <string name="frag_qr_pay">QR Pay</string>
+    <string name="frag_msg">Kotak Masuk</string>
+    <string name="frag_relese">Release</string>
+    <string name="frag_favorit">Favorit</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Beranda</item>
+        <item>Informasi Rekening</item>
+        <item>Top Up</item>
+        <item>Release Rekening</item>
+        <item>Pembayaran</item>
+        <item>Pembelian</item>
+        <item>QR Pay</item>
+        <item>List Transaksi me-Cash</item>
+        <item>Kotak Masuk</item>
+        <item>Informasi Pedagang</item>
+        <item>Tambah Akun</item>
+    </string-array>
+
+    <string-array name="btn_item_activity_titles">
+        <item>Pilih Nomor Rekening</item>
+        <item>Masukkan PIN</item>
+        <item>Informasi Saldo</item>
+        <item>Daftar Mutasi</item>
+        <item>Pilih Nominal Transaksi</item>
+        <item>Informasi Transaksi</item>
+        <item>Top Up</item>
+        <item>Release Transaksi</item>
+        <item>List Transaksi me-Cash</item>
+    </string-array>
+
+    <string name="activity_title_about_us">About Us</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <!-- Items Menu Informasi Saldo -->
+    <string-array name="menu_inforek">
+        <item>Informasi Saldo</item>
+        <item>Daftar Mutasi</item>
+    </string-array>
+
+    <!-- Items Menu Top Up -->
+    <string-array name="menu_topup">
+        <item>Top Up dari Rekening</item>
+        <item>Release Me-cash ke Rekening</item>
+    </string-array>
+
+    <string-array name="menu_item_nominal">
+        <item>5000</item>
+        <item>25000</item>
+        <item>50000</item>
+        <item>100000</item>
+        <item>150000</item>
+        <item>200000</item>
+        <item>250000</item>
+        <item>500000</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="accept">Setuju</string>
+    <string name="eula_string">
+        Definisi\n
+        1. Bank adalah PT .... .... berkedudukan di Bogor dan beralamat di Jl. Bengkulu 6, Kab. Bogor\n
+        2. Mobile Banking adalah fasilitas layanan Bank yang dapat dimanfaatkan Nasabah untuk
+        melakukan transaksi perbankan yang ditentukan oleh bank melalui jaringan internet dengan
+        sarana handphone maupun gadget yang dimiliki nasabah.\n
+        3. IBA Online adalah brand untuk aplikasi Mobile Banking ...\n
+        4. Kode Aktivasi adalah kode berupa kombinasi numeric yang dicetak dalam bentuk PIN Mailer
+        atau dikirim melalui SMS setelah nasabah melakukan pendaftaran layanan IBA Online.
+        kode aktivasi ini harus dimasukan d=kedalam ponsel nasabah saat akan mengaktifkan layanan
+        IBA Online. kode aktivasi ini harus dimasukkan kedalam ponsel nasabah saat akan
+        mengaktifkan layanan IBA Online.\n
+        5. PIN(Personal Identification Number) adalah nomor identifikasi pribadi yang
+        bersifat rahasia dan hanya di ketahui oleh nasabah ketika akan melakukan transaksi.\n
+        6. QR Pay adalah transaksi transfer menggunakan scan kode barcode.\n
+        7. E-Money adalah uang digital yang diterbitkan oleh Mitrasoft Global.\n
+
+        IBA Online
+        1. Nasabah Pengguna dapat menggunakan layanan IBA Online untuk mendapatkan informasi dan
+        atau melakukan transaksi perbankan yang ditentukan oleh bank.\n
+        2. Nasabah Pengguna dapat menggunakan layanan IBA Online setelah memperoleh kode aktivasi dari bank.\n
+        3. Nasabah pengguna memiliki ponsel dengan teknologi EDGE/3G/4G dan telah mengaktifkan fasilitas EDGE/3G/4G di
+        kartu seluler/ SIM Card.\n
+        4. Nasabah mengunduk aplikasi IBA Online.
+        \t Aplikasi dapat diuntuk melalui:
+        \t a. Untuk ponsel Android
+        \tGoogle Play Store
+    </string>
+
+    <!--  STRING REBUILD BY RAKHA -->
+    <string name="foto_mg">FotoMG</string>
+    <string name="lorem_sm">Lorem Insum</string>
+    <string name="lorem_md">Lorem Insum Lorem Insum Lorem Insum</string>
+    <string name="lorem_lg">Lorem Insum Lorem Insum Lorem Insum Lorem Insum Lorem Insum Lorem Insum</string>
+
+    <string name="text_profile">Profil</string>
+    <string name="text_saldo">Rp 100.000</string>
+
+    <string name="text_info_saldo">Info Saldo</string>
+    <string name="text_mutasi_saldo">Daftar Mutasi</string>
+    <string name="text_riwayat_trn">Lihat Riwayat</string>
+    <string name="text_transfer">Transfer</string>
+    <string name="text_info_prodak">Info Prodak</string>
+
+    <string name="text_payment">Top Up &amp; Payment</string>
+    <string name="text_topup">Top Up</string>
+    <string name="text_release">Release</string>
+    <string name="text_pulsa">Pulsa</string>
+    <string name="text_listrik">Listrik PLN</string>
+    <string name="text_pdam">PDAM</string>
+    <string name="text_more">Lainnya</string>
+    <string name="text_qr">Scan QR</string>
+
+    <string name="text_name_emoney">Mitrasoft Emoney</string>
+    <string name="text_transaksi">Transaksi</string>
+    <string name="text_pembelian">Pembelian</string>
+    <string name="text_pembayaran">Pembayaran</string>
+    <string name="text_history_trx">Riwayat Transaksi</string>
+
+    <string name="text_account">Account</string>
+    <string name="text_account_ket">Lakukan Pengaturan Account</string>
+    <string name="text_ulasan">Ulasan</string>
+    <string name="text_ulasan_ket">Ulas kami di playstore</string>
+    <string name="text_about">About</string>
+    <string name="text_about_ket">Tentang, Versi aplikasi</string>
+    <string name="text_logout">Logout</string>
+    <string name="text_logout_ket">Keluar dari Aplikasi</string>
+    <string name="text_pengaturan">Pengaturan</string>
+    <string name="text_pengaturan_ket">Akun dan Keamanan Akun</string>
+
+    <string name="text_data_diri">Data Diri</string>
+    <string name="text_keamanan_akun">Keamanan Akun</string>
+    <string name="text_ganti_pass">Kata Sandi</string>
+    <string name="text_ganti_pin">Pin Transaksi</string>
+    <string name="text_change_pin">Ubah Pin Transaksi</string>
+    <string name="text_change_pass">Ubah Kata Sandi</string>
+    <string name="text_old_pin">Pin Lama</string>
+    <string name="text_new_pin">Pin Baru</string>
+    <string name="text_konf_pin">Ketik Ulang Pin Baru</string>
+    <string name="text_rubah">Ubah PIN</string>
+    <string name="text_rubah_pass">Ubah Password</string>
+
+    <string name="text_pilih_rekening">Pilih Nomor Rekening</string>
+    <string name="text_jumlah_transaksi">Pilih Jumlah Transaksi</string>
+    <string name="todo">TODO</string>
+    <string name="text_masukkan_pin">Masukkan PIN</string>
+
+    <string name="text_batal">Batal</string>
+    <string name="text_lanjut">Lanjutkan</string>
+    <string name="text_bayar">Bayar</string>
+    <string name="text_ok">OK</string>
+
+    <string name="text_transaksi_berhasil">Transaksi Berhasil</string>
+
+    <string name="text_judul_merchant">Informasi Merchant</string>
+    <string name="text_id_merchant">ID Merchant</string>
+    <string name="text_nama_merchant">Nama Merchant</string>
+    <string name="text_nominal_bayar">Nominal Bayar</string>
+    <string name="text_about_app">IBA M-Banking\nVersi: 0.7 BETA\n\nReport Problem: cv.mitrasoftglobal@gmail.com
+    </string>
+    <string name="text_username">Username</string>
+    <string name="text_password">Password</string>
+    <string name="text_old_pass">Password Lama</string>
+    <string name="text_new_pass">Password Baru</string>
+    <string name="text_konf_pass">Ketik Ulang Password Baru</string>
+    <string name="settings">Settings?</string>
+    <string name="text_login">LOGIN</string>
+    <string name="text_create_akun">No account yet? Create one</string>
+    <string name="text_form_regis">Form Regis</string>
+    <string name="text_transfer_lokal">Transfer Lokal Bank</string>
+    <string name="text_transfer_bprs">Transfer Antar BPRS</string>
+    <string name="text_transfer_bank">Transfer Antar Bank Konven</string>
+    <string name="text_norek_pengirim">Nomor Rekening Pengirim</string>
+    <string name="text_norek_penerima">Nomor Rekening Penerima</string>
+    <string name="text_nm_norek_penerima">Nama Rekening Penerima</string>
+    <string name="text_nama_rekening_new">Nama Rekening Baru</string>
+    <string name="text_no_rekening_new">Nomor Rekening Baru</string>
+    <string name="text_no_rekening_utama">Nomor Rekening Utama</string>
+    <string name="text_nm_rekening_utama">Nama Akun</string>
+    <string name="text_kontak">Kontak</string>
+    <string name="text_edit_kontak">Edit Kontak</string>
+    <string name="text_email">Email</string>
+    <string name="text_nohp">No HP</string>
+    <string name="text_referensi">Referensi</string>
+    <string name="text_nominal_transfer">Nominal Transfer</string>
+    <string name="text_keterangan">Keterangan</string>
+
+    <string name="text_merchant">Merchant</string>
+
+    <string name="text_info_trf">Informasi Transfer</string>
+
+    <string name="text_under_build">Kami sedang bekerja untuk menghadirkan fitur ini</string>
+
+    <string name="text_tanggal">Tanggal</string>
+    <string name="text_jam_awal">Jam Awal</string>
+    <string name="text_jam_akhir">Jam Akhir</string>
+
+    <string name="text_hist_trx">Riwayat Transaksi</string>
+    <string name="text_mohon_tunggu">Mohon Tunggu</string>
+    <string name="text_kirim_ulang">Klik untuk kirim Ulang</string>
+
+    <string name="text_add_akun">Tambah Akun</string>
+
+</resources>
+

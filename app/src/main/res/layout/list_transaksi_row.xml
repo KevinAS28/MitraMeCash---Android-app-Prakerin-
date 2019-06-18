@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20sp"
+        android:paddingVertical="5sp"
+        android:gravity="center"
+>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/release_saldo"
+              android:text="112233"
+              android:textSize="20sp"
+              android:layout_alignParentLeft="true"
+              android:layout_centerVertical="true"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/waktu"
+              android:text="21/07/2018"
+              android:textSize="15sp"
+              android:layout_marginTop="30sp"
+              android:layout_centerHorizontal="true"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/debet"
+              android:text="Rp.11111"
+              android:layout_alignParentRight="true"
+              android:textSize="20sp"
+              android:layout_centerVertical="true"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/ket"
+              android:text="keterangan"
+              android:textSize="20sp"
+              android:layout_centerHorizontal="true"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="2sp"
+                  android:background="#44000000"
+                  android:layout_below="@id/waktu"/>
+</RelativeLayout>
+
+
